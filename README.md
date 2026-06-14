@@ -38,6 +38,21 @@ KISSA MIKAZUKI is a fictional shop created for this design study.
 
 See [spec.md](./spec.md) for the full design specification.
 
+## Install as a skill / スキルとして導入
+
+This repo ships a cross-agent **`SKILL.md`** (open standard) usable by both Claude Code and Codex CLI as a design-reference skill. Link the repo into the agent's skills directory:
+
+このリポジトリは Claude Code / Codex CLI 共通の **`SKILL.md`**（オープン標準）を同梱し、デザイン参照スキルとして使えます。
+
+```bash
+# Claude Code
+ln -s "$(pwd)" ~/.claude/skills/design-vintage-sundries-showa-retro
+# Codex CLI
+ln -s "$(pwd)" ~/.codex/skills/design-vintage-sundries-showa-retro
+```
+
+Restart the agent; it is matched automatically by the skill's `description` (skill name: `design-vintage-sundries-showa-retro`). / エージェント再起動後、`description` に基づき自動マッチします。
+
 ## Part of
 
 vintage-sundries persona series — 1 of 4. Navigator: [vintage-sundries](../README.md)
